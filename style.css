@@ -1,0 +1,610 @@
+/* =========================
+   RESET & VARIABLES
+========================= */
+
+:root {
+    --blue: #0b4f6c;
+    --blue-light: #1677b8;
+    --dark-blue: #07364b;
+    --white: #ffffff;
+    --cream: #f5f1e8;
+    --text: #253238;
+    --gray: #6b777c;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    color: var(--text);
+    background: var(--white);
+    line-height: 1.6;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: min(1120px, 90%);
+    margin: auto;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    padding: 25px 0;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo,
+.footer-brand h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+
+.logo {
+    color: white;
+}
+
+.logo span,
+.footer-brand span {
+    color: #72c7f2;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+}
+
+.nav-links a {
+    color: white;
+    font-size: 14px;
+    transition: opacity 0.3s;
+}
+
+.nav-links a:hover {
+    opacity: 0.7;
+}
+
+.nav-button {
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    padding: 10px 18px;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.nav-button:hover {
+    background: white;
+    color: var(--blue);
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 100vh;
+
+    background-image:
+        url("https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=2000&q=85");
+
+    background-size: cover;
+    background-position: center;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    color: white;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(4, 37, 54, 0.85),
+            rgba(4, 37, 54, 0.45)
+        );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 750px;
+}
+
+.hero-subtitle {
+    font-size: 12px;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    color: #a9ddf7;
+}
+
+.hero h1 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(52px, 7vw, 90px);
+    line-height: 1.05;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    font-style: italic;
+}
+
+.hero-description {
+    max-width: 500px;
+    font-size: 17px;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 35px;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 25px;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: var(--blue-light);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: white;
+    color: var(--blue);
+}
+
+.btn-outline {
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    color: white;
+}
+
+.btn-outline:hover {
+    background: white;
+    color: var(--blue);
+}
+
+.btn-white {
+    background: white;
+    color: var(--blue);
+}
+
+.btn-white:hover {
+    background: var(--cream);
+}
+
+
+/* =========================
+   SCROLL INDICATOR
+========================= */
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 11px;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.scroll-indicator span {
+    width: 30px;
+    height: 1px;
+    background: white;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.intro {
+    padding: 130px 0;
+}
+
+.intro-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 90px;
+    align-items: center;
+}
+
+.section-label {
+    font-size: 11px;
+    letter-spacing: 3px;
+    font-weight: 700;
+    color: var(--blue-light);
+    margin-bottom: 18px;
+}
+
+.intro h2,
+.section-heading h2,
+.reservation h2 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(38px, 4vw, 58px);
+    line-height: 1.15;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.intro p:not(.section-label) {
+    color: var(--gray);
+    margin-bottom: 18px;
+}
+
+.intro-image img {
+    height: 550px;
+    object-fit: cover;
+}
+
+.text-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: var(--blue);
+    font-weight: 600;
+    transition: transform 0.3s;
+}
+
+.text-link:hover {
+    transform: translateX(5px);
+}
+
+
+/* =========================
+   MENU
+========================= */
+
+.menu {
+    background: var(--cream);
+    padding: 120px 0;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.menu-card {
+    background: white;
+    transition: transform 0.35s ease;
+}
+
+.menu-card:hover {
+    transform: translateY(-8px);
+}
+
+.menu-image {
+    overflow: hidden;
+}
+
+.menu-image img {
+    height: 280px;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.menu-card:hover img {
+    transform: scale(1.06);
+}
+
+.menu-content {
+    padding: 25px;
+}
+
+.menu-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.menu-title h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 23px;
+    font-weight: 600;
+}
+
+.menu-title span {
+    color: var(--blue-light);
+    font-weight: 700;
+}
+
+.menu-content p {
+    color: var(--gray);
+    font-size: 14px;
+}
+
+.menu-button {
+    text-align: center;
+    margin-top: 50px;
+}
+
+
+/* =========================
+   EXPERIENCE
+========================= */
+
+.experience {
+    min-height: 650px;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    background-image:
+        url("https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=2000&q=80");
+
+    background-size: cover;
+    background-position: center;
+
+    color: white;
+}
+
+.experience-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(5, 45, 65, 0.75);
+}
+
+.experience-content {
+    position: relative;
+    z-index: 2;
+}
+
+.light {
+    color: #a9ddf7;
+}
+
+.experience h2 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(50px, 6vw, 80px);
+    line-height: 1.05;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+.experience p:not(.section-label) {
+    max-width: 450px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery {
+    padding: 120px 0;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.gallery-grid img {
+    height: 350px;
+    object-fit: cover;
+    transition: opacity 0.3s;
+}
+
+.gallery-grid img:hover {
+    opacity: 0.8;
+}
+
+
+/* =========================
+   RESERVATIONS
+========================= */
+
+.reservation {
+    padding: 120px 0;
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(10, 75, 105, 0.95),
+            rgba(10, 75, 105, 0.95)
+        ),
+        url("https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=1800&q=80");
+
+    background-size: cover;
+    background-position: center;
+
+    color: white;
+}
+
+.reservation-content {
+    max-width: 750px;
+}
+
+.reservation p:not(.section-label) {
+    max-width: 500px;
+    margin: 0 auto 35px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #062d3e;
+    color: white;
+    padding-top: 70px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+    padding-bottom: 60px;
+}
+
+.footer-brand {
+    max-width: 300px;
+}
+
+.footer-brand h3 {
+    margin-bottom: 15px;
+}
+
+.footer-brand p {
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 14px;
+}
+
+.footer-info {
+    display: flex;
+    gap: 70px;
+}
+
+.footer-info h4 {
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+
+.footer-info p {
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 13px;
+}
+
+.footer-info a:hover {
+    color: #72c7f2;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    padding: 25px;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+
+/* =========================
+   RESPONSIVE - TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .intro-container {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-container {
+        flex-direction: column;
+    }
+
+}
+
+
+/* =========================
+   RESPONSIVE - MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .nav-button {
+        display: none;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .intro,
+    .menu,
+    .gallery,
+    .reservation {
+        padding: 80px 0;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-info {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .hero h1 {
+        font-size: 52px;
+    }
+
+}
