@@ -5,7 +5,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>DEPS Complex</title>
+    <title>DEPS Complex – Гръцки ресторант в София | бул. Рожен 23</title>
+    <meta name="description" content="DEPS Complex – гръцки ресторант в София с автентична гръцка кухня, морски специалитети и приятна атмосфера. Посетете ни на бул. „Рожен“ 23.">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#062d3e">
+    <link rel="canonical" href="https://depscomplex.com/">
+
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+    <!-- Open Graph / social sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="DEPS Complex – Гръцки ресторант в София">
+    <meta property="og:description" content="Автентични гръцки вкусове, морски специалитети и приятна атмосфера в София. DEPS Complex, бул. „Рожен“ 23.">
+    <meta property="og:url" content="https://depscomplex.com/">
+    <meta property="og:site_name" content="DEPS Complex">
+    <meta property="og:locale" content="bg_BG">
+    <meta property="og:image" content="https://depscomplex.com/images/726c0c00-57dd-46ca-b9e7-94f293aad9a5.jpg">
+    <meta property="og:image:alt" content="Гръцка кухня в DEPS Complex">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="DEPS Complex – Гръцки ресторант в София">
+    <meta name="twitter:description" content="Автентични гръцки вкусове, морски специалитети и приятна атмосфера в София.">
+    <meta name="twitter:image" content="https://depscomplex.com/images/726c0c00-57dd-46ca-b9e7-94f293aad9a5.jpg">
 
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
@@ -13,8 +34,57 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- LocalBusiness / Restaurant structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "@id": "https://depscomplex.com/#restaurant",
+        "name": "DEPS Complex",
+        "url": "https://depscomplex.com/",
+        "image": "https://depscomplex.com/images/726c0c00-57dd-46ca-b9e7-94f293aad9a5.jpg",
+        "description": "Гръцки ресторант в София с автентични гръцки вкусове, морски специалитети и приятна атмосфера.",
+        "servesCuisine": [
+            "Greek",
+            "Mediterranean"
+        ],
+        "telephone": "+359879333177",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "бул. „Рожен“ 23",
+            "postalCode": "1220",
+            "addressLocality": "София",
+            "addressCountry": "BG"
+        },
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday",
+                    "Saturday"
+                ],
+                "opens": "09:00",
+                "closes": "23:30"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Sunday",
+                "opens": "09:00",
+                "closes": "23:00"
+            }
+        ],
+        "sameAs": [
+            "https://www.facebook.com/BarCartel/",
+            "https://www.instagram.com/depscomplexbg/"
+        ]
+    }
+    </script>
 </head>
 
 <body>
@@ -23,11 +93,11 @@
     <header class="navbar">
         <div class="container nav-container">
 
-            <a href="#home" class="logo">
+            <a href="#home" class="logo" aria-label="DEPS Complex – начало">
                 DEPS<span>.</span>
             </a>
 
-            <nav>
+            <nav class="desktop-nav" aria-label="Основна навигация">
                 <ul class="nav-links">
                     <li><a href="#home">Начало</a></li>
                     <li><a href="#menu">Меню</a></li>
@@ -40,6 +110,26 @@
                 Резервирай маса
             </a>
 
+            <button class="menu-toggle" type="button" aria-label="Отвори менюто" aria-controls="mobile-menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+
+        <div class="mobile-menu" id="mobile-menu">
+            <div class="container">
+                <nav aria-label="Мобилна навигация">
+                    <ul class="mobile-nav-links">
+                        <li><a href="#home">Начало</a></li>
+                        <li><a href="#menu">Меню</a></li>
+                        <li><a href="#about">За нас</a></li>
+                        <li><a href="#gallery">Галерия</a></li>
+                        <li><a href="#contact" class="mobile-nav-cta">Резервирай маса</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </header>
 
@@ -50,9 +140,8 @@
         <div class="hero-overlay"></div>
 
         <div class="container hero-content">
-
             <p class="hero-subtitle">
-                GREEK RESTAURANT · BAR & GRILL · СОФИЯ
+                GREEK RESTAURANT · BAR &amp; GRILL · СОФИЯ
             </p>
 
             <h1>
@@ -66,7 +155,6 @@
             </p>
 
             <div class="hero-buttons">
-
                 <a href="#menu" class="btn btn-primary">
                     Разгледай менюто
                 </a>
@@ -82,6 +170,7 @@
         <div class="scroll-indicator">
             <span></span>
             Плъзни нагоре да разгледаш
+        </div>
 
     </section>
 
@@ -103,8 +192,8 @@
                 </h2>
 
                 <p>
-                    DEPS съчетава вкуса на Гърция с приятна и модерна
-                    атмосфера. При нас ще откриете разнообразна кухня,
+                    DEPS е гръцки ресторант в София, който съчетава вкуса на Гърция
+                    с приятна и модерна атмосфера. При нас ще откриете разнообразна кухня,
                     свежи продукти и специалитети, приготвени с внимание
                     към всеки детайл.
                 </p>
@@ -118,15 +207,18 @@
                 <a href="#menu" class="text-link">
                     Разгледай предложенията →
                 </a>
-
             </div>
 
 
             <div class="intro-image">
 
                 <img
-                    src="images/726c0c00-57dd-46ca-b9e7-94f293aad9a5.jpg"
-                    alt="Гръцка кухня"
+                    src="images/plakat.webp"
+                    alt="DEPS Complex – гръцки ресторант в София, музикална програма и адрес"
+                    width="1024"
+                    height="1536"
+                    loading="lazy"
+                    decoding="async"
                 >
 
             </div>
@@ -164,10 +256,11 @@
                         <img
                             src="images/гръцкасалата.png"
                             alt="Гръцка салата"
+                            loading="lazy"
+                            decoding="async"
                         >
 
                     </div>
-
                     <div class="menu-content">
 
                         <div class="menu-title">
@@ -183,8 +276,6 @@
                     </div>
 
                 </article>
-
-
                 <!-- DISH 2 -->
                 <article class="menu-card">
 
@@ -192,7 +283,9 @@
 
                         <img
                             src="images/морски.png"
-                            alt="Морски специалитет"
+                            alt="Морски специалитети"
+                            loading="lazy"
+                            decoding="async"
                         >
 
                     </div>
@@ -221,7 +314,9 @@
 
                         <img
                             src="images/традиционносувлаки.png"
-                            alt="Сувлаки"
+                            alt="Традиционно сувлаки"
+                            loading="lazy"
+                            decoding="async"
                         >
 
                     </div>
@@ -244,15 +339,6 @@
 
             </div>
 
-
-            <div class="menu-button">
-
-                <a href="#contact" class="btn btn-primary">
-                    Виж цялото меню
-                </a>
-
-            </div>
-
         </div>
 
     </section>
@@ -260,7 +346,6 @@
 
     <!-- EXPERIENCE -->
     <section class="experience">
-
         <div class="experience-overlay"></div>
 
         <div class="container experience-content">
@@ -305,26 +390,33 @@
 
                 <img
                     src="images/e0d6d19d-e3cd-44c4-af16-7e842843db31.jpg"
-                    alt="Greek food"
+                    alt="Гръцка храна в DEPS Complex"
+                    loading="lazy"
+                    decoding="async"
                 >
 
                 <img
                     src="images/d3f61ba5-1c6e-4abb-b156-3a126c61329b.jpg"
-                    alt="Mediterranean food"
+                    alt="Средиземноморска храна в DEPS Complex"
+                    loading="lazy"
+                    decoding="async"
                 >
 
                 <img
                     src="images/13f977eb-a258-48fd-aa7f-844dce8c6cb1.jpg"
-                    alt="Restaurant atmosphere"
+                    alt="Атмосферата в ресторант DEPS Complex"
+                    loading="lazy"
+                    decoding="async"
                 >
 
                 <img
                     src="images/гирос.png"
-                    alt="Greek cuisine"
+                    alt="Гиро и гръцка кухня в DEPS Complex"
+                    loading="lazy"
+                    decoding="async"
                 >
 
             </div>
-
         </div>
 
     </section>
@@ -341,22 +433,66 @@
 
             <h2>
                 Резервирахте ли?<br>
-                
+
             </h2>
 
             <p>
                 Резервирайте своята маса и се потопете
                 в атмосферата на Средиземноморието.
             </p>
+            <div class="reservation-actions">
+                <button type="button" class="btn btn-white" id="open-reservation-modal" aria-haspopup="dialog" aria-controls="reservation-modal">
+                    Обади се за резервация
+                </button>
 
-            <a href="tel:+359879333177" class="btn btn-white">
-                Обади се за резервация
-            </a>
+            </div>
 
         </div>
 
     </section>
 
+
+    <!-- RESERVATION MODAL -->
+    <div class="modal" id="reservation-modal" hidden>
+        <div class="modal-backdrop" data-close-modal></div>
+
+        <div
+            class="modal-dialog"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="reservation-modal-title"
+            aria-describedby="reservation-modal-description"
+        >
+            <button
+                type="button"
+                class="modal-close"
+                id="close-reservation-modal"
+                aria-label="Затвори прозореца"
+            >
+                &times;
+            </button>
+
+            <p class="section-label">РЕЗЕРВАЦИЯ</p>
+            <h2 id="reservation-modal-title">Свържете се с DEPS</h2>
+            <p id="reservation-modal-description">
+                Обадете се на следния номер, за да резервирате маса.
+            </p>
+
+            <a href="tel:+359879333177" class="modal-phone">087 933 3177</a>
+
+            <div class="modal-actions">
+                <a href="tel:+359879333177" class="btn btn-primary">
+                    Обади се
+                </a>
+
+                <button type="button" class="btn btn-secondary" id="modal-copy-phone">
+                    Копирай номера
+                </button>
+            </div>
+
+            <p class="copy-status" id="copy-status" role="status" aria-live="polite"></p>
+        </div>
+    </div>
 
     <!-- FOOTER -->
     <footer>
@@ -372,8 +508,25 @@
                     незабравима атмосфера в София.
                 </p>
 
-            </div>
+                <div class="social-links" aria-label="Социални мрежи">
+                    <a href="https://www.facebook.com/BarCartel/" target="_blank" rel="noopener noreferrer" aria-label="DEPS Complex във Facebook">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M14 8h3V4h-3c-3.31 0-5 1.9-5 5v3H6v4h3v8h4v-8h3.2l.8-4H13V9c0-.66.34-1 1-1Z"></path>
+                        </svg>
+                        <span>Facebook</span>
+                    </a>
 
+                    <a href="https://www.instagram.com/depscomplexbg/" target="_blank" rel="noopener noreferrer" aria-label="DEPS Complex в Instagram">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <rect x="3" y="3" width="18" height="18" rx="5" ry="5"></rect>
+                            <circle cx="12" cy="12" r="4"></circle>
+                            <circle cx="17.5" cy="6.5" r="1" class="social-icon-fill"></circle>
+                        </svg>
+                        <span>Instagram</span>
+                    </a>
+                </div>
+
+            </div>
 
             <div class="footer-info">
 
@@ -402,7 +555,7 @@
                 <div>
                     <h4>Контакти</h4>
                     <p>
-                        <a href="tel:+359877774184">
+                        <a href="tel:+359879333177">
                             087 933 3177
                         </a>
                     </p>
@@ -414,7 +567,6 @@
 
 
         <div class="footer-bottom">
-
             <p>
                 © 2026 DEPS. Всички права запазени.
             </p>
@@ -423,5 +575,6 @@
 
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
